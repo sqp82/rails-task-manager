@@ -9,4 +9,7 @@
 
 <%= link_to "Edit task", :action => :edit, :id => @task.id %>
 <%# <%= link_to "Edit task", "/tasks/#{@task.id}/edit"%>
+
+<%= link_to "Delete #{@task.title}", task_path(@task), method: :delete, data: { confirm: "Are you sure?" } %>
+
 <%= link_to "Return to home", tasks_path%>
